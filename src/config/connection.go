@@ -23,7 +23,7 @@ func Connect() *gorm.DB {
 				os.Getenv("DB_PORT"),
 				os.Getenv("DB_NAME"))
 	
-	fmt.Println("ya error cok", os.Getenv("DB_NAME"))	
+	// fmt.Println("ya error cok", os.Getenv("DB_NAME"))	
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Println("connection failed", err)

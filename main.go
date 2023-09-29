@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"os"
 
 	"github.com/HafidurR/final-prjk/src/config"
 	"github.com/HafidurR/final-prjk/src/routes"
@@ -12,7 +10,6 @@ import (
 
 func main()  {
 	loadEnv()
-	fmt.Println("ya error", os.Getenv("DB_NAME"))	
 	config.Connect()
 	routes.HandleRequest()
 }
